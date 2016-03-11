@@ -2,7 +2,7 @@
 Save and watch Series with autoplay on bs.to with Vivo-Player
 
 ***Help***
--Integrate with grasemonkey or other add-ons for you're browser.
+- Integrate with grasemonkey or other add-ons for you're browser.
 
 ***Info***
 - Dies ist ein Script um Serien zu speichern und weiter zu gucken.
