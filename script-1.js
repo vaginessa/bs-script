@@ -28,8 +28,8 @@ function button (value, x, y, click, can)
     if (can ())
     {
         input.style.cursor = "pointer";
-        input.onmouseover = function (){ input_5.style.backgroundColor = "#0066FF"; input_5.style.color = "black"; input_5.style.border = "2px solid #0066FF";};
-        input.onmouseout = function (){ input_5.style.backgroundColor = "green"; input_5.style.color = "white"; input_5.style.border = "2px solid green";};
+        input.onmouseover = function (){ input.style.backgroundColor = "#0066FF"; input.style.color = "black"; input.style.border = "2px solid #0066FF";};
+        input.onmouseout = function (){ input.style.backgroundColor = "green"; input.style.color = "white"; input.style.border = "2px solid green";};
         input.onclick = click;
     }
     else
