@@ -4,7 +4,7 @@
 // @version      1
 // @description  try to take over the world!
 // @author       Gunnar aka the curler
-// @match        http://bs.to/*
+// @match        https://bs.to/*
 // @grant        none
 // ==/UserScript==
 /* jshint -W097 */
