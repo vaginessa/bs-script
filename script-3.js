@@ -4,7 +4,7 @@
 // @version      1
 // @description  try to take over the world!
 // @author       Gunnar aka the Curler
-// @match        https://*.vivo.sx*
+// @match        *://*/*
 // @grant        none
 // ==/UserScript==
 /* jshint -W097 */
