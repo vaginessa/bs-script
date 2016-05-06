@@ -58,7 +58,7 @@ function button (value, x, y, click, can)
 }
 //
 //clas select
-function cookie_switch (str)
+function cookie_switch (nexxt)
 {
     var list = cookie_list ();
     var x = document.createElement ("SELECT");
@@ -70,10 +70,10 @@ function cookie_switch (str)
         z.appendChild (document.createTextNode (opt[0]));
         x.appendChild (z);
     }
-    if (str == ": Cookie löschen?")
-        x.onclick = function (){ if (confirm (x.children[x.selectedIndex].text + str)) del_cookie (x.children[x.selectedIndex].text); location.reload ();};
+    if (nexxt)
+        x.onclick = function (){ if (confirm (x.children[x.selectedIndex].text + ": Cookie löschen?")) del_cookie (x.children[x.selectedIndex].text); location.reload ();};
     else
-       x.onclick = function (){ if (confirm (x.children[x.selectedIndex].text + str)) next (x.value)};
+       x.onclick = function (){ if (confirm (x.children[x.selectedIndex].text + ": Weiter gucken?")) next (x.value)};
     x.style.padding = "10px 22px";
     x.style.fontSize = "22px";
     x.setAttribute ("size", list.length);
@@ -99,8 +99,8 @@ function cookie_list ()
 //buttons
 var info_button = new button ("info", "5px", "5px", function (){ alert (gInfo);}, function (){ return 1;});
 var safe_button = new button ("speichern", "60px", "5px", function (){ if (confirm ("Speichern?")){ save (); location.reload ();}}, function (){ if (is_valid (location.href)) return 1;});
-var next_button = new button ("weiter gucken", "115px", "5px", function (){ cookie_switch (": Weiter gucken?");}, function (){ if (cookie_list () != "") return 1;});
-var delete_button = new button ("löschen", "170px", "5px", function (){ cookie_switch (": Cookie löschen?");}, function (){ if (cookie_list () != "") return 1;});
+var next_button = new button ("weiter gucken", "115px", "5px", function (){ cookie_switch (1);}, function (){ if (cookie_list () != "") return 1;});
+var delete_button = new button ("löschen", "170px", "5px", function (){ cookie_switch (0);}, function (){ if (cookie_list () != "") return 1;});
 var stop_button =  new button ("stop", "225px", "5px", function (){ if (confirm ("Stop")){ clearTimeout (gTimeout); location.assign (location.origin);}}, function (){ if (location.search == "?next") return 1;});
 //
 //forever
