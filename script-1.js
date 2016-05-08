@@ -70,7 +70,7 @@ function cookie_switch (nexxt)
         z.appendChild (document.createTextNode (opt[0]));
         x.appendChild (z);
     }
-    if (nexxt)
+    if (!nexxt)
         x.onclick = function (){ if (confirm (x.children[x.selectedIndex].text + ": Cookie löschen?")) del_cookie (x.children[x.selectedIndex].text); location.reload ();};
     else
        x.onclick = function (){ if (confirm (x.children[x.selectedIndex].text + ": Weiter gucken?")) next (x.value)};
